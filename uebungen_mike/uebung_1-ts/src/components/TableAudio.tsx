@@ -1,0 +1,33 @@
+import TableRowAudio from "./TableRowAudio";
+
+type Ele = string | number;
+type Index = number;
+
+function TableAudio(props) {
+  /* 
+    props:
+     - data: Array (books/audio)
+    */
+
+  return (
+    <table>
+      <thead>
+        <tr>
+          <th>Autor</th>
+          <th>Titel</th>
+          <th>Jahr</th>
+          <th>Länge</th>
+          <th>Verlag</th>
+        </tr>
+      </thead>
+      <tbody>
+        {props.data.map((ele: Ele, index: Index) => {
+          // ele = Objekt
+          return <TableRowAudio audio={ele} i={index} />;
+        })}
+      </tbody>
+    </table>
+  );
+}
+
+export default TableAudio;

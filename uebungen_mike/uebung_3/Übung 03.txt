@@ -1,0 +1,90 @@
+*********
+* Teil 01
+*********
+
+* Erstelle ein neues Projekt mit dem Namen "uebung03".
+
+* In "App.jsx" ersetze den Rückgabewert durch:
+
+*********
+      <>
+        <h1>Music</h1>
+      </>
+*********
+
+* In "App.css" ersetze den existierenden Inhalt durch:
+
+*********
+body {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  padding: 15px;
+  color: #122240;
+}
+table {
+  text-align: left;
+  border: 1px solid#284c94;
+  border-collapse: collapse;
+  margin-bottom: 15px
+}
+a {
+  color: #122240;
+}
+td, th {
+  border: 1px solid#284c94;
+  border-collapse: collapse;
+  padding: 8px 16px
+}
+.odd td {
+  background-color: #e9edf5;
+}
+th {
+  background-color: #dce5f5;
+}
+*********
+
+
+
+*********
+* Teil 02
+*********
+
+* Erstelle eine neue Funktionskomponente mit dem Namen "Table.jsx" und binde sie in "App.js" ein.
+* Route "Table.jsx" für die Startseite.
+
+* Erzeuge eine Konstante für die Alben, die folgende Daten enthält:
+
+*********
+	[
+        {
+            "title": "Wretch",
+            "year": 1991
+        },
+        {
+            "title": "Blues for the Red Sun",
+            "year": 1992
+        },
+        {
+            "title": "Welcome to Sky Valley",
+            "year": 1994
+        },
+        {
+            "title": "...And the Circus Leaves Town",
+            "year": 1995
+        }
+    ]
+*********
+
+* Erzeuge eine Tabelle die alle Alben auflistet und nur jeweils den Titel anzeigt.
+
+* Für die Darstellung der einzelnen Zeilen erstelle eine neue Funktionskomponente mit dem Namen "TableRow.jsx".
+
+
+
+*********
+* Teil 03
+*********
+
+* Erstelle eine neue Funktionskomponente mit dem Namen "Details.jsx".
+* Route sie als "/details", plus Parameter, um die passenden "Album"-Details anzuzeigen.
+* Verlinke in der "TableRow.js" zu "Details".
+* Verlinke außerdem zurück zur "Startseite".

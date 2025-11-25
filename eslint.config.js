@@ -1,36 +1,36 @@
 import js from '@eslint/js';
 import globals from 'globals';
-import reactHooks from 'eslint-plugin-react-hooks';
-import reactRefresh from 'eslint-plugin-react-refresh';
-import { defineConfig, globalIgnores } from 'eslint/config';
+import { defineConfig } from 'eslint/config';
 
 export default defineConfig([
-  globalIgnores(['dist']),
   {
     files: ['**/*.{js,jsx}'],
+    languageOptions: {
+      ecmaVersion: 'latest',
+      sourceType: 'module',
+      globals: globals.browser,
+      parserOptions: { ecmaFeatures: { jsx: true } },
+    },
+    plugins: ['react', 'react-hooks', 'prettier', 'react-refresh'],
     extends: [
       js.configs.recommended,
-      reactHooks.configs.flat.recommended,
-      reactRefresh.configs.vite,
-      // Prettier-Regeln integrieren
-      'eslint:recommended',
       'plugin:react/recommended',
+      'plugin:react-hooks/recommended',
       'plugin:prettier/recommended',
-      'prettier',
+      'react-refresh',
     ],
-    languageOptions: {
-      ecmaVersion: 2020,
-      globals: globals.browser,
-      parserOptions: {
-        ecmaVersion: 'latest',
-        ecmaFeatures: { jsx: true },
-        sourceType: 'module',
-      },
-    },
     rules: {
-      'no-unused-vars': ['error', { varsIgnorePattern: '^[A-Z_]' }],
-      'prettier/prettier': 'error', // Prettier Fehler als ESLint Fehler anzeigen
-      'react/react-in-jsx-scope': 'off', // Ab React 17 nicht mehr notwendig
+      'no-unused-vars': ['warn', { varsIgnorePattern: '^[A-Z_]' }],
+      'react/react-in-jsx-scope': 'off',
+      'prettier/prettier': 'error',
+      'padding-line-between-statements': [
+        'error',
+        { blankLine: 'always', prev: 'import', next: '*' },
+        { blankLine: 'always', prev: '*', next: 'class' },
+        { blankLine: 'always', prev: 'block', next: '*' },
+      ],
+      'react/jsx-max-props-per-line': ['error', { maximum: 1 }],
+      'react/jsx-first-prop-new-line': ['error', 'multiline'],
     },
   },
 ]);
