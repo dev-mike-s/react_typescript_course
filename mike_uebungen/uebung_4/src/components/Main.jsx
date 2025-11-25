@@ -42,7 +42,9 @@ class Main extends Component {
       handys: { hersteller: [], modelle: [] },
     };
 
-    inputHandler = (e) => {};
+    inputHandler = (e) => {
+      this.setState({ [e.target.name]: e.target.value });
+    };
   }
 
   render() {
@@ -61,7 +63,12 @@ class Main extends Component {
       </div>
       <div>
         <h2>Anbieter</h2>
-        <select required>
+        <select
+          name='anbieter'
+          value={this.state.anbieter}
+          onChange={this.inputHandler}
+          required
+        >
           <option value='-1'>Bitte Anbieter wählen</option>
         </select>
         <div>
