@@ -9,3 +9,9 @@ Hinweise:
 - 'weiter' navigieren mit this.SetState()
 
 - 'zurueck' 
+
+- anbieter: {this.daten.anbieter[this.state.anbieter]}
+
+- bereich 6 datenvolumen mit ? Operator
+
+- 

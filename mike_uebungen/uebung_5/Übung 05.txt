@@ -1,0 +1,412 @@
+*********
+* Teil 01
+*********
+
+* Erstelle ein neues Projekt mit dem Namen "uebung5".
+
+* In "App.jsx" ersetze den Rückgabewert durch:
+
+*********
+      <div id="container">
+        <header>
+          <h1>Bücher und Mehr</h1>
+        </header>
+        <nav className="clearfix">
+          <div>Shop</div>
+          <div>Warenkorb ()</div>
+        </nav>
+        <main>
+        </main>
+      </div>
+*********
+
+* In "App.css" ersetze den existierenden Inhalt durch:
+
+*********
+#container {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  width: 95%;
+  color: #122240;
+  margin: 0 auto
+}
+h2 {
+  font-size: 90%
+}
+nav div {
+  border: 1px solid#284c94;
+  padding: 10px 20px;
+  color: #122240;
+  background-color: #dce5f5;
+  cursor: pointer;
+  float: left
+}
+nav .active div {
+  background-color: #e9eef7;
+  color: grey
+}
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+table {
+  text-align: left;
+  border: 1px solid#284c94;
+  border-collapse: collapse
+}
+td, th {
+  border: 1px solid#284c94;
+  border-collapse: collapse;
+  padding: 8px 16px
+}
+th {
+  background-color: #dce5f5;
+}
+td:last-child {
+  cursor: pointer
+}
+a {
+  color: #122240;
+}
+*********
+
+* Der Output für geroutete Komponenten soll im MAIN-Element erfolgen.
+
+* Erzeuge eine Konstante für die Produkte, die folgende Daten enthält:
+
+*********
+			[ 
+                {
+                  "name": "Entertainment",
+                  "gruppe": [
+                    {
+                      "name": "Spiele",
+                      "artikel": [
+                        {
+                          "titel": "Donkey Kong",
+                          "jahr": 1981,
+                          "publisher": "Nintendo",
+                          "preis": 99.99
+                        },
+                        {
+                          "titel": "Pac-Man",
+                          "jahr": 1980,
+                          "publisher": "Namco",
+                          "preis": 99.99
+                        },
+                        {
+                          "titel": "Asteroids",
+                          "jahr": 1979,
+                          "publisher": "Atari",
+                          "preis": 99.99
+                        },
+                        {
+                          "titel": "Space Invaders",
+                          "jahr": 1978,
+                          "publisher": "Taito",
+                          "preis": 99.99
+                        },
+                        {
+                          "titel": "Pong",
+                          "jahr": 1972,
+                          "publisher": "Atari",
+                          "preis": 99.99
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Bücher",
+                      "artikel": [
+                        {
+                          "autor": "Stephen King",
+                          "titel": "Carrie",
+                          "jahr": 1974,
+                          "seiten": 199,
+                          "verlag": "Doubleday",
+                          "preis": 9.99
+                        },
+                        {
+                          "autor": "Stephen King",
+                          "titel": "The Shining",
+                          "jahr": 1977,
+                          "seiten": 447,
+                          "verlag": "Doubleday",
+                          "preis": 9.99
+                        },
+                        {
+                          "autor": "Stephen King",
+                          "titel": "Christine",
+                          "jahr": 1983,
+                          "seiten": 526,
+                          "verlag": "Viking",
+                          "preis": 14.99
+                        },
+                        {
+                          "autor": "Stephen King",
+                          "titel": "It",
+                          "jahr": 1986,
+                          "seiten": 1138,
+                          "verlag": "Viking",
+                          "preis": 19.99
+                        },
+                        {
+                          "autor": "Stephen King",
+                          "titel": "Misery",
+                          "jahr": 1987,
+                          "seiten": 310,
+                          "verlag": "Viking",
+                          "preis": 9.99
+                        },
+                        {
+                          "autor": "Stephen King",
+                          "titel": "Joyland",
+                          "jahr": 2013,
+                          "seiten": 288,
+                          "verlag": "Hard Case Crime",
+                          "preis": 9.99
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Audio-Books",
+                      "artikel": [
+                        {
+                          "autor": "Stephen King",
+                          "titel": "Bag of Bones",
+                          "jahr": 2005,
+                          "laenge": 240,
+                          "verlag": "Simon & Schuster Audio",
+                          "preis": 19.99
+                        },
+                        {
+                          "autor": "Stephen King",
+                          "titel": "On Writing: A Memoir of the Craft",
+                          "jahr": 2000,
+                          "laenge": 120,
+                          "verlag": "Simon & Schuster Audio",
+                          "preis": 19.99
+                        },
+                        {
+                          "autor": "Stephen King",
+                          "titel": "Salem's Lot (introduction)",
+                          "jahr": 2004,
+                          "laenge": 180,
+                          "verlag": "Simon & Schuster Audio",
+                          "preis": 29.99
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "Sport",
+                  "gruppe": [
+                    {
+                      "name": "Schuhe",
+                      "artikel": [
+                        {
+                          "titel": "Air Betonfuß",
+                          "hersteller": "Mike",
+                          "preis": 149.99
+                        },
+                        {
+                          "titel": "Turtle Light",
+                          "hersteller": "attitas",
+                          "preis": 129.99
+                        },
+                        {
+                          "titel": "Royal Classic Loser",
+                          "hersteller": "Rehbock",
+                          "preis": 99.99
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Geräte",
+                      "artikel": [
+                        {
+                          "titel": "Hantelset 250g",
+                          "beschreibung": "Kurzhantel, 10 Scheiben",
+                          "preis": 149.99
+                        },
+                        {
+                          "titel": "Fingerexpander",
+                          "beschreibung": "Maximallänge 25cm",
+                          "preis": 149.99
+                        },
+                        {
+                          "titel": "Gymnastikball",
+                          "beschreibung": "Durchmesser 8,5m",
+                          "preis": 149.99
+                        }
+                      ]
+                    }
+                  ]
+                }
+             ]
+*********	
+
+* Erzeuge außerdem ein Array für den Warenkorb.		 
+
+
+
+*********
+* Teil 02
+*********
+
+* Erzeuge die Komponente "Select".
+* Route diese Komponente als Startseiteninhalt.
+
+* Grundgerüst für den Rückgabewert:
+
+*********
+        <>
+            <h2>Willkommen zum Shop!</h2>
+            <form>
+				<select>
+					<option value="-1">Bitte Bereich wählen</option>
+				</select>
+				<select>
+					<option value="-1">Bitte wählen</option>
+				</select>
+            </form>
+        </>
+*********
+
+* Vervollständige, auf Basis der Daten, die SELECT-Elemente. Das erste für die Hauptkategorie, das zweite für die Unterkategorie ("gruppe").
+* Falls keine Hauptkategorie ausgewählt ist, soll die Auswahlliste für die Unterkategorie nicht zu sehen sein.
+* Außerdem soll beim Wechsel der Hauptkategorie die Auswahlliste für die Unterkategorie zurückgesetzt werden.
+
+
+
+*********
+* Teil 03
+*********
+
+* Erzeuge die Komponente "Table".
+* Route diese Komponente ebenfalls als Startseiteninhalt.
+
+* Grundgerüst für den Rückgabewert:
+
+*********
+<>
+	{/* SPIELE */}
+	<div>
+		<h2>Spiele</h2>
+		<table>
+			<thead>
+				<tr>
+					<th>Titel</th>
+					<th>Preis</th>
+					<th></th>
+				</tr>
+			</thead>
+		</table>
+	</div>
+
+	{/* BÜCHER */}
+	<div>
+		<h2>Bücher</h2>
+		<table>
+			<thead>
+				<tr>
+					<th>Autor</th>
+					<th>Titel</th>
+					<th>Preis</th>
+					<th></th>
+				</tr>
+			</thead>
+		</table>
+	</div>
+
+	{/* AUDIO-BOOKS */}
+	<div>
+		<h2>Audio-Books</h2>
+		<table>
+			<thead>
+				<tr>
+					<th>Autor</th>
+					<th>Titel</th>
+					<th>Preis</th>
+					<th></th>
+				</tr>
+			</thead>
+		</table>    
+	</div>
+
+	{/* SCHUHE */}
+	<div>
+		<h2>Schuhe</h2>
+		<table>
+			<thead>
+				<tr>
+					<th>Name</th>
+					<th>Preis</th>
+					<th></th>
+				</tr>
+			</thead>
+		</table>
+	</div>
+
+	{/* GERÄTE */}
+	<div>
+		<h2>Geräte</h2>
+		<table>
+			<thead>
+				<tr>
+					<th>Name</th>
+					<th>Beschreibung</th>
+					<th>Preis</th>
+					<th></th>
+				</tr>
+			</thead>
+		</table>
+	</div>
+</>
+*********	
+
+* Es soll die Tabelle mit der jeweiligen Produktkategorie angezeigt werden, je nachdem, welche über die Auswahllisten gewählt wurde.
+* In der Tabelle soll auch eine Spalte zum "Hinzufügen" des Artikels zum Warenkorb sein.	 
+
+
+
+*********
+* Teil 04
+*********
+
+* Erzeuge die Komponente "Cart" und route diese als "/cart".
+
+* Grundgerüst für den Rückgabewert:
+
+*********
+<>
+	<h2>Warenkorb</h2>
+	<table>
+		<thead>
+			<tr>
+				<th>Titel</th>
+				<th>Preis</th>
+				<th></th>
+			</tr>
+		</thead>
+		<tbody>
+		</tbody>
+	</table>
+
+	<p>Der Warenkorb ist leer.</p>
+</>
+*********
+
+* Zeige hier entweder die Tabelle mit den Produkten im Warenkorb an oder die "...leer" Nachricht.
+* In der Tabelle soll auch eine Spalte zum "Entfernen" des Artikels zum Warenkorb sein.	 
+
+
+
+*********
+* Teil 05
+*********
+
+* Verlinke die DIV's im NAV mit den passenden Pfaden.
+* In der Klammer hinter "Warenkorb" soll außerdem die
+Anzahl der darin enthaltenen Produkte angezeigt werden.
