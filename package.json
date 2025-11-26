@@ -8,6 +8,7 @@
     "@eslint/js": "^9.39.1",
     "@types/react": "^19.2.6",
     "@types/react-dom": "^19.2.3",
+    "cross-env": "^10.1.0",
     "eslint": "^9.39.1",
     "eslint-plugin-react": "^7.37.5",
     "eslint-plugin-react-hooks": "^7.0.1",
@@ -15,7 +16,14 @@
     "vite": "^7.2.4"
   },
   "dependencies": {
+    "@vitejs/plugin-react": "^5.1.1",
     "react": "^19.2.0",
     "react-dom": "^19.2.0"
-  }
+  },
+  "scripts": {
+    "uebung-1": "cross-env VITE_APP_ROOT=mike_uebungen/uebung_1 npx vite --config vite.shared.js",
+    "uebung1-ts": "cross-env VITE_APP_ROOT=mike_uebungen/uebung_1-ts npx vite --config vite.shared.js",
+    "uebung2": "cross-env VITE_APP_ROOT=mike_uebungen/uebung_2 npx vite --config vite.shared.js",
+    "uebung3": "cross-env VITE_APP_ROOT=mike_uebungen/uebung_3 npx vite --config vite.shared.js",
+    "uebung4": "cross-env VITE_APP_ROOT=mike_uebungen/uebung_4 npx vite --config vite.shared.js"  }
 }

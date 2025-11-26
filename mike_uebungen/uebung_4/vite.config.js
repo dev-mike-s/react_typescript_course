@@ -9,7 +9,7 @@ export default defineConfig(({ command, mode }) => {
     base: '',
     publicDir: path.resolve(rootDir, 'public'),
     build: { outDir: path.resolve(rootDir, 'dist') },
-    server: { port: 5179 },
+    server: { port: 5555 },
     ...shared({ rootDir, command, mode }),
   };
 });
