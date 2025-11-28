@@ -1,24 +1,33 @@
-🚀 Projektname
-Diese Monorepo mit zentralisierten configs, dient 4-wöchiger-intensiver Weiterbildung in Vollzeit - in den modernen Frontend-Technologien React.js mit JavaScript und TypeScript. 
+# 🚀 Projektname
+<br>
 
-Da der Kurs von meiner Seite, gerade was die Programmierung angeht, aus teilweise in einem remote PC absolviert wurde - war dies die perfekte Gelegenheit meinen zuletzt im CRM-Software-Unternehmen praktizierten Umgang mit git, Github Desktop und Github Web weiter Routine mäßig auszuführen. 
+Diese Monorepo mit zentralisierten configs, dient intensiver Weiterbildung in Vollzeit über einen 4-wöchigen Zeitraum (inkl. vieler Überstunden ;-), in den modernen Frontend-Entwicklung mit React.js in JavaScript und TypeScript. 
 
-Randnotiz ich (dev-mike-s) bin der Uhrheber und habe dieses README.md nach der Formel 80-20 zum überwiegenden Teil durch menschliche Arbeit erstellt, der Rest entstammt Gen-KI-Ursprungs.
+Da der Kurs von meiner Seite aus, gerade was die Programmierung angeht -
+teilweise von einem remote PC (Cloud) absolviert wurde - war dies die perfekte Gelegenheit meinen zuletzt im CRM-Software-Unternehmen praktizierten Umgang mit git, Github Desktop und Github Web weiter routinemäßig auszuführen. 
 
-🛠️ Technologie-Stack
+<br>
+
+Randnotiz ich (dev-mike-s) bin der Uhrheber und habe dieses README.md nach der Formel 80-20 zum überwiegenden Teil durch menschliche Arbeit erstellt, der Rest entstammt Gen-KI-Ursprungs. 
+
+**Primäre Konzepte / Themen:**
+
+-React Vite Apps -Grundlagen in JavaScript/ES6 -Grundlagen in HTML,CSS -Grundlagen in TypeScript -Klassenkomponenten mit state -Funktionskomponenten mit use state und hooks -Serverseitige CRUD-Aufrufe todo
+
+<br>
+
+# 🛠️ Technologie-Stack
+
 Chronologische Auflistung der ausgeübten Technologien:
 
 Frontend-Sprachen: HTML, CSS, JavaScript, JS ES6, TypeScript
-
 Frontend-Bibliotheken: React, 
-
 Datenbank: 
-
 Deployment/Infrastruktur: 
-
 Tooling: Visual Studio Code, npm, React mit Vite, Axios, 
 
-🏗️ Installation (Getting Started)
+# 🏗️ Installation (Getting Started)
+
 -Installieren von Github Desktop auf Client PCs
 -Online repo lokal auf den Client PC klonen
 -prüfen ob auf dem Client PC nodeJS und npm installiert ist, 
@@ -35,8 +44,8 @@ npm i
 
 Bash
 
-# todo .env Datei
 
+# todo .env Datei
 
 
 # todo Befehle und Testing
@@ -46,5 +55,26 @@ npm run dev	Startet den Entwicklungsserver mit Hot Reload.
 
 Sidenotes: Auf branching wird verzichtet, da es primär um das Synchronisieren meiner Kurs-Unterlagen und meines Codes geht.
 
-📄 Lizenz
+
+# 📄 Lizenz
+
 Dieses Projekt steht unter der [Name der Lizenz, z.B. MIT License].
+
+
+# CHEAT SHEET
+
+# Überschrift 1
+## Überschrift 2
+### Überschrift 3
+** fett **
+*Punkt*
+<br>
+1. Punkt
+`Code`
+bash code
+[Text](URL)
+---
+
+<br>
+
+*Good documentation saves time. Bad documentation creates legends… and not the good kind.*
