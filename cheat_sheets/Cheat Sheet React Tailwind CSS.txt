@@ -1,0 +1,30 @@
+********************************
+* CHEAT SHEET REACT TAILWIND CSS
+********************************
+https://tailwindcss.com/docs/installation/using-vite
+
+
+Tailwind CSS installieren
+------------------------>
+
+cd my-project
+npm install tailwindcss @tailwindcss/vite
+
+
+Vite-Plugin konfigurieren (in "vite.config.ts")
+---------------------------------------------->
+
+import { defineConfig } from 'vite'
+import tailwindcss from '@tailwindcss/vite' // <- Hinzufügen!
+
+export default defineConfig({
+	plugins: [
+		tailwindcss(), // <- Hinzufügen!
+	],
+})
+
+
+Tailwind CSS importieren (in CSS-Datei)
+-------------------------------------->
+
+@import "tailwindcss";

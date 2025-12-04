@@ -1,7 +1,17 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
+import { defineConfig } from "vite";
+import shared from "../../vite.shared.js";
+import path from "path";
+import { fileURLToPath } from "url";
 
-// https://vite.dev/config/
-export default defineConfig({
-  plugins: [react()],
-})
+export default defineConfig(({ command, mode }) => {
+  const __dirname = path.dirname(fileURLToPath(import.meta.url));
+  const rootDir = path.resolve(__dirname);
+  return {
+    root: rootDir,
+    base: "",
+    publicDir: path.resolve(rootDir, "public"),
+    build: { outDir: path.resolve(rootDir, "dist") },
+    server: { port: 5179 },
+    ...shared({ rootDir, command, mode }),
+  };
+});

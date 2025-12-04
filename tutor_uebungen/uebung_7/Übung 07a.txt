@@ -1,0 +1,7 @@
+* Erweitere "uebung07".
+
+***********************
+ÄNDERUNGEN ZU ÜBUNG 07:
+***********************
+
+* Verteile die Logik der Reducer-Funktion auf mehrere Reducer.
