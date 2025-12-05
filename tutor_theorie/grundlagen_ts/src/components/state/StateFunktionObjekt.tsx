@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import React, { useState } from 'react'
 
 function StateFunktionObjekt() {
 
@@ -7,7 +7,7 @@ function StateFunktionObjekt() {
         nachname: ""
     })
 
-    const inputHandler = (e) => {
+    const inputHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
         setzeFormular((currentState) => {
             return {
                 ...currentState,

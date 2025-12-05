@@ -2,12 +2,19 @@ import { Component } from 'react';
 import Table from './Table.jsx';
 
 export class Main extends Component {
+
   constructor(props) {
     super(props);
 
     this.state = {
+      categorySwitch: true,
       //'Bücher' | 'Audio-Books': []
     };
+
+    /*  this.state = {
+      counter: 0,
+      error: false
+    }  */
 
     this.products = [
       {
@@ -84,27 +91,41 @@ export class Main extends Component {
         ],
       },
     ];
+
+    this.switchProductcategory = this.switchProductcategory.bind(this);
   }
 
-  // switch product category
-  switchProductcategory = () => {};
+  switchProductcategory = () => {
+    this.setState((currentState) => {
+      return {
+        categorySwitch: !currentState.categorySwitch
+      }
+    }, () => { console.log(this.state.counter); })
+  };
 
+  debugger;
   render() {
     return (
+
       <main>
         <div>Main</div>
         <button onClick={this.switchProductcategory}>
           Produktkategorie wechseln
         </button>
-        <h2>Bücher</h2>
-        <Table data={PRODUCTS} />
-        {/*
-                <Table data={BOOKS} />
-                <h2>Audio-Books</h2>
-                <Table data={AUDIO} />
-                */}
+        {this.state.categorySwitch ? <h2>Bücher</h2> : <h2>Audio-Books</h2>}
+        && {this.state.categorySwitch ? <div><Table data={products.name[0] = { books }} /></div> :
+          <Table data={products.name[0] = { books }} />}
+
+        { /* 
+        <Table data={products} />
+        <Table data={BOOKS} />
+        <h2>Audio-Books</h2>
+        <Table data={AUDIO} />
+        */ }
+
       </main>
-    );
+
+    )
   }
 }
 

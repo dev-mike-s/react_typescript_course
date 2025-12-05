@@ -2,7 +2,7 @@ import { useState } from 'react'
 
 function StateFunktionArray() {
 
-    const [zahlen, setzeZahlen] = useState([])
+    const [zahlen, setzeZahlen] = useState<number[]>([])
 
     const neueZahl = () => {
         // Zufallszahl von einschließlich 1 bis 10
@@ -12,7 +12,7 @@ function StateFunktionArray() {
         })
     }
 
-    const loescheZahl = (index) => {
+    const loescheZahl = (index: number) => {
         setzeZahlen((currentState) => {
             const NEUES_ARRAY = currentState.filter((ele, i) => {
                 return index != i

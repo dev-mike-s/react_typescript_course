@@ -73,7 +73,7 @@ export class StateKlasse extends Component {
                 this.state.error &&
                 <div>Fehler!</div>
             }
-
+    
             <div>Zähler: {this.state.counter}</div>
             <button onClick={this.setToZero}>Zurücksetzen auf 0</button><br />
             <button onClick={this.incrementByOne}>Hochzählen um 1</button><br />

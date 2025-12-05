@@ -1,8 +1,17 @@
 import { Component } from 'react'
 
-class StateKlasseObjekt extends Component {
+type Props = {}
 
-    constructor(props) {
+type State = {
+    formular: {
+        vorname: string,
+        nachname: string
+    }
+}
+
+class StateKlasseObjekt extends Component<Props, State> {
+
+    constructor(props: Props) {
         super(props)
 
         this.state = {
@@ -13,7 +22,7 @@ class StateKlasseObjekt extends Component {
         }
     }
 
-    inputHandler = (e) => {
+    inputHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
         this.setState((currentState) => {
             return {
                 formular: {
@@ -22,7 +31,7 @@ class StateKlasseObjekt extends Component {
                 }
             }
         },
-        () => { console.log(this.state.formular) })
+            () => { console.log(this.state.formular) })
     }
 
     render() {

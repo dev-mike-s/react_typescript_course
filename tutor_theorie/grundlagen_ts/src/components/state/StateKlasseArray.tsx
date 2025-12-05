@@ -1,8 +1,14 @@
 import { Component } from 'react'
 
-class StateKlasseArray extends Component {
+type Props = {}
 
-    constructor(props) {
+type State = {
+    zahlen: number[]
+}
+
+class StateKlasseArray extends Component<Props, State> {
+
+    constructor(props: Props) {
         super(props)
 
         this.state = {
@@ -20,7 +26,7 @@ class StateKlasseArray extends Component {
         })
     }
 
-    loescheZahl = (index) => {
+    loescheZahl = (index: number) => {
         this.setState((currentState) => {
             /* 
             "filter" erzeugt ein neues Array, das mit den Elementen
